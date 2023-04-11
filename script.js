@@ -1,5 +1,3 @@
-// Your Script here.
-
 const lookup = {
   'A': 'N','B': 'O','C': 'P','D': 'Q',
   'E': 'R','F': 'S','G': 'T','H': 'U',
@@ -10,17 +8,13 @@ const lookup = {
   'Y': 'L','Z': 'M', '?': '?', ',': ','
 };
 
-function rot13(encodedStr){
-  let decodedArr = []; // Your Result goes here
-  for (let i = 0; i < encodedStr.length; i++) {
-    const char = encodedStr[i];
-    const decodedChar = lookup[char];
-    decodedArr.push(decodedChar !== undefined ? decodedChar : char);
-  }
-  return decodedArr.join('');
+function rot13(encodedStr) {
+  let decodedArr = [];
+  for(leti=0;i<encodedStr.length;i++){
+		decodedArr.charAt(i)=string(encodedStr.charAt(i)+13)
+	}
+  return decodedArr ;
 }
 
-// You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
-console.log(rot13("SERR YBIR? NPPVBWBO"));
-
 module.exports = rot13;
+
